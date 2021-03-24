@@ -1,0 +1,14 @@
+[Unit]
+Description=Focalboard server
+
+[Service]
+Type=simple
+User=__APP__
+Group=__APP__
+Restart=always
+RestartSec=5s
+ExecStart=__FINALPATH__/bin/focalboard-server
+WorkingDirectory=__FINALPATH__
+
+[Install]
+WantedBy=multi-user.target
