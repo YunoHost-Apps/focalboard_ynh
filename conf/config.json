@@ -6,7 +6,7 @@
 	"useSSL": false,
 	"webpath": "./pack",
 	"filespath": "./files",
-    "telemetry": true,
+    "telemetry": false,
     "session_expire_time": 2592000,
     "session_refresh_time": 18000,
     "localOnly": false,
