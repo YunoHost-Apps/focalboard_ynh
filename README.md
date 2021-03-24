@@ -1,7 +1,7 @@
 # Focalboard for YunoHost
 
 [![Integration level](https://dash.yunohost.org/integration/focalboard.svg)](https://dash.yunohost.org/appci/app/focalboard) ![](https://ci-apps.yunohost.org/ci/badges/focalboard.status.svg) ![](https://ci-apps.yunohost.org/ci/badges/focalboard.maintain.svg)  
-[![Install focalboard with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=focalboard)
+[![Install Focalboard with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=focalboard)
 
 *[Lire ce readme en français.](./README_fr.md)*
 
@@ -9,17 +9,13 @@
 If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/install) to learn how to install it.*
 
 ## Overview
-Quick description of this app.
+Focalboard is an open source, self-hosted alternative to Trello, Notion, and Asana. It helps define, organize, track and manage work across individuals and teams.
 
 **Shipped version:** 0.6.1
 
 ## Screenshots
 
 ![](https://www.focalboard.com/img/hero.jpg)
-
-## Demo
-
-* [Official demo](Link to a demo site for this app.)
 
 ## Configuration
 

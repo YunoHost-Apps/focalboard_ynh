@@ -4,15 +4,13 @@
     "packaging_format": 1,
     "description": {
         "en": "Self-hosted alternative to Trello, Notion, and Asana",
-        "fr": "Alternative auto-hébergée à Trello, Notion et Asana "
+        "fr": "Alternative auto-hébergée à Trello, Notion et Asana"
     },
     "version": "0.6.1~ynh1",
     "url": "https://www.focalboard.com/",
     "license": "MIT",
     "maintainer": {
-        "name": "John doe",
-        "email": "john.doe@example.com",
-        "url": "http://example.com"
+        "name": "John doe"
     },
     "requirements": {
         "yunohost": ">= 4.1.7"
@@ -28,12 +26,6 @@
                 "name": "domain",
                 "type": "domain",
                 "example": "example.com"
-            },
-            {
-                "name": "path",
-                "type": "path",
-                "example": "/focalboard",
-                "default": "/focalboard"
             },
             {
                 "name": "is_public",
