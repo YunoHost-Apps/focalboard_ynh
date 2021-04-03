@@ -35,8 +35,8 @@ Can the app be used by multiple users? **Yes**
 
 #### Supported architectures
 
-* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/focalboard%20%28Apps%29.svg)](https://ci-apps.yunohost.org/ci/apps/focalboard/)
-* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/focalboard%20%28Apps%29.svg)](https://ci-apps-arm.yunohost.org/ci/apps/focalboard/)
+* x86-64 - [![Build Status](https://ci-apps.yunohost.org/ci/logs/focalboard.svg)](https://ci-apps.yunohost.org/ci/apps/focalboard/)
+* ARMv8-A - [![Build Status](https://ci-apps-arm.yunohost.org/ci/logs/focalboard.svg)](https://ci-apps-arm.yunohost.org/ci/apps/focalboard/)
 
 ## Limitations
 
