@@ -128,7 +128,7 @@ chmod 600 $final_path/config.json
 #=================================================
 # SETUP LOGROTATE
 #=================================================
-ynh_script_progression --message="Upgrading logrotate configuration..." --time --weight=2
+ynh_script_progression --message="Upgrading logrotate configuration..." --weight=2
 
 # Use logrotate to manage app-specific logfile(s)
 ynh_use_logrotate --non-append
