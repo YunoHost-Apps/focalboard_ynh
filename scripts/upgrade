@@ -127,14 +127,6 @@ chmod -R 755 $files_path
 chmod 600 $final_path/config.json
 
 #=================================================
-# SETUP LOGROTATE
-#=================================================
-ynh_script_progression --message="Upgrading logrotate configuration..." --weight=2
-
-# Use logrotate to manage app-specific logfile(s)
-ynh_use_logrotate --non-append
-
-#=================================================
 # INTEGRATE SERVICE IN YUNOHOST
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
