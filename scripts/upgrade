@@ -72,8 +72,23 @@ if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
 
+	# Create a temporary directory
+	tmpdir="$(mktemp -d)"
+
+	# Backup the config file in the temp dir
+	cp -a "$final_path/config.json" "$tmpdir/config.json"
+
+	# Remove the app directory securely
+	ynh_secure_remove --file="$final_path"
+	
 	# Download, check integrity, uncompress and patch the source from app.src
 	ynh_setup_source --dest_dir="$final_path"
+
+	# Copy the admin saved settings from tmp directory to final path	
+	cp -a "$tmpdir/config.json" "$final_path/config.json" 
+
+	# Remove the tmp directory securely
+	ynh_secure_remove --file="$tmpdir"
 fi
 
 #=================================================
@@ -106,12 +121,6 @@ ynh_script_progression --message="Upgrading systemd configuration..." --weight=1
 
 # Create a dedicated systemd config
 ynh_add_systemd_config
-
-#=================================================
-# UPDATE A CONFIG FILE
-#=================================================
-
-ynh_add_config --template="../conf/config.json" --destination="$final_path/config.json"
 
 #=================================================
 # GENERIC FINALIZATION
