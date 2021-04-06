@@ -65,7 +65,7 @@ ynh_app_setting_set --app=$app --key=port --value=$port
 #=================================================
 ynh_script_progression --message="Installing dependencies..." --weight=1
 
-ynh_install_app_dependencies $pkg_dependencies
+ynh_exec_warn_less ynh_install_app_dependencies $pkg_dependencies
 
 #=================================================
 # CREATE DEDICATED USER
@@ -73,7 +73,7 @@ ynh_install_app_dependencies $pkg_dependencies
 ynh_script_progression --message="Configuring system user..." --weight=11
 
 # Create a system user
-ynh_system_user_create --username=$app
+ynh_system_user_create --username=$app --home_dir="$final_path"
 
 #=================================================
 # CREATE A POSTGRESQL DATABASE
@@ -95,12 +95,21 @@ ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 ynh_setup_source --dest_dir="$final_path"
 
 #=================================================
+# CREATE DIRECTORIES
+#=================================================
+
+files_path=/home/yunohost.app/$app
+ynh_app_setting_set --app=$app --key=files_path --value=$files_path
+
+mkdir -p $files_path/files
+
+#=================================================
 # NGINX CONFIGURATION
 #=================================================
 ynh_script_progression --message="Configuring NGINX web server..." --weight=2
 
 # Create a dedicated NGINX config
-ynh_add_nginx_config
+ynh_add_nginx_config "files_path"
 
 #=================================================
 # SETUP SYSTEMD
@@ -124,7 +133,9 @@ ynh_add_config --template="../conf/config.json" --destination="$final_path/confi
 
 # Set permissions to app files
 chown -R $app:$app $final_path
-chmod -R o-rwx "$final_path"
+chown -R $app:$app $files_path
+#chmod -R o-rwx $final_path
+chmod -R 755 $files_path
 chmod 600 $final_path/config.json
 
 #=================================================
@@ -132,7 +143,7 @@ chmod 600 $final_path/config.json
 #=================================================
 ynh_script_progression --message="Integrating service in YunoHost..." --weight=4
 
-yunohost service add $app --description="A short description of the app" --log="/var/log/$app/$app.log"
+yunohost service add $app --description="Self-hosted kanban board" --log="/var/log/$app/$app.log"
 
 #=================================================
 # START SYSTEMD SERVICE
@@ -140,7 +151,7 @@ yunohost service add $app --description="A short description of the app" --log="
 ynh_script_progression --message="Starting a systemd service..." --weight=1
 
 # Start a systemd service
-ynh_systemd_action --service_name=$app --action="start" --log_path="/var/log/$app/$app.log"
+ynh_systemd_action --service_name=$app --action=start --log_path="/var/log/$app/$app.log"
 
 #=================================================
 # SETUP SSOWAT
