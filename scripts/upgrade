@@ -111,7 +111,7 @@ ynh_add_systemd_config
 # UPDATE A CONFIG FILE
 #=================================================
 
-ynh_add_config --template="some_config_file" --destination="$final_path/some_config_file"
+ynh_add_config --template="../conf/config.json" --destination="$final_path/config.json"
 
 #=================================================
 # GENERIC FINALIZATION
