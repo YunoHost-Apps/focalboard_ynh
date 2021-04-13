@@ -3,6 +3,7 @@
 	"port": __PORT__,
 	"dbtype": "postgres",
 	"dbconfig": "postgres://__DB_NAME__:__DB_PWD__@localhost/__DB_NAME__?sslmode=disable&connect_timeout=10",
+	"postgres_dbconfig": "dbname=focalboard sslmode=disable",
 	"useSSL": false,
 	"webpath": "./pack",
 	"filespath": "./files",
@@ -11,3 +12,7 @@
     "session_refresh_time": 18000,
     "localOnly": false
 }
+
+
+"dbtype": "postgres",
+"dbconfig": "postgres://__DB_NAME__:__DB_PWD__@localhost/__DB_NAME__?sslmode=disable&connect_timeout=10",
