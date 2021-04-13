@@ -11,7 +11,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 ## Overview
 Focalboard is an open source, self-hosted alternative to Trello, Notion, and Asana. It helps define, organize, track and manage work across individuals and teams.
 
-**Shipped version:** 0.6.1
+**Shipped version:** 0.6.5
 
 ## Screenshots
 
