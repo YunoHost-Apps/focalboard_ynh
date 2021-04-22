@@ -3,13 +3,12 @@
 	"port": __PORT__,
 	"dbtype": "postgres",
 	"dbconfig": "postgres://__DB_NAME__:__DB_PWD__@localhost/__DB_NAME__?sslmode=disable&connect_timeout=10",
+	"postgres_dbconfig": "dbname=focalboard sslmode=disable",
 	"useSSL": false,
 	"webpath": "./pack",
-	"filespath": "/home/yunohost.app/__APP__/files",
+	"filespath": "./files",
     "telemetry": false,
     "session_expire_time": 2592000,
     "session_refresh_time": 18000,
-    "localOnly": false,
-    "enableLocalMode": true,
-    "localModeSocketLocation": "/var/tmp/focalboard_local.socket"
+    "localOnly": false
 }
