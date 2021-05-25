@@ -94,6 +94,10 @@ ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 # Download, check integrity, uncompress and patch the source from app.src
 ynh_setup_source --dest_dir="$final_path"
 
+# Set permissions to app files
+chown -R $app:$app $final_path
+chmod -R 755 $files_path
+
 #=================================================
 # CREATE DIRECTORIES
 #=================================================
@@ -124,18 +128,6 @@ ynh_add_systemd_config
 #=================================================
 
 ynh_add_config --template="../conf/config.json" --destination="$final_path/config.json"
-
-#=================================================
-# GENERIC FINALIZATION
-#=================================================
-# SECURE FILES AND DIRECTORIES
-#=================================================
-
-# Set permissions to app files
-chown -R $app:$app $final_path
-chown -R $app:$app $files_path
-#chmod -R o-rwx $final_path
-chmod -R 755 $files_path
 chmod 600 $final_path/config.json
 
 #=================================================
