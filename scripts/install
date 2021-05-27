@@ -95,8 +95,9 @@ ynh_app_setting_set --app=$app --key=final_path --value=$final_path
 ynh_setup_source --dest_dir="$final_path"
 
 # Set permissions to app files
-chown -R $app:$app $final_path
-chmod -R 755 $files_path
+chmod 750 "$final_path"
+chmod -R o-rwx "$final_path"
+chown -R $app:www-data "$final_path"
 
 #=================================================
 # CREATE DIRECTORIES
@@ -104,8 +105,8 @@ chmod -R 755 $files_path
 
 files_path=/home/yunohost.app/$app
 ynh_app_setting_set --app=$app --key=files_path --value=$files_path
-
 mkdir -p $files_path/files
+chmod -R 755 $files_path
 
 #=================================================
 # NGINX CONFIGURATION
