@@ -106,7 +106,7 @@ files_path=/home/yunohost.app/$app
 ynh_app_setting_set --app=$app --key=files_path --value=$files_path
 
 mkdir -p $files_path/files
-chown -R $app:$app $files_path
+chown -R $app:www-data $files_path
 chmod -R 755 $files_path
 
 #=================================================
