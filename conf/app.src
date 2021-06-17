@@ -1,4 +1,4 @@
-SOURCE_URL=https://github.com/mattermost/focalboard/releases/download/v0.7.0-rc2/focalboard-server-linux-amd64.tar.gz
+SOURCE_URL=https://github.com/mattermost/focalboard/releases/download/v0.7.0/focalboard-server-linux-amd64.tar.gz
 SOURCE_SUM=39e00162517f7b41536d618bfee7223635bce2ce5844f25283b99b26c40a2a80
 SOURCE_SUM_PRG=sha256sum
 SOURCE_FORMAT=tar.gz
