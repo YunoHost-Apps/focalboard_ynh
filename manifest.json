@@ -11,12 +11,13 @@
     "upstream": {
         "license": "MIT",
         "website": "https://www.focalboard.com/",
-        "admindoc": "https://www.focalboard.com/guide/user/",
+        "admindoc": "https://www.focalboard.com/guide/admin/",
+        "userdoc": "https://www.focalboard.com/guide/user/",
         "code": "https://github.com/mattermost/focalboard"
     },
     "license": "MIT",
     "maintainer": {
-        "name": "John doe"
+        "name": "eric_G"
     },
     "requirements": {
         "yunohost": ">= 4.2.4"
