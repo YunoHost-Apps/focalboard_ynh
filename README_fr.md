@@ -13,7 +13,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Alternative auto-hébergée à Trello, Notion et Asana
 
-**Version incluse :** 0.8.0~ynh1
+**Version incluse :** 0.9.0~ynh1
 
 
 
