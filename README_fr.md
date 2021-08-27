@@ -11,7 +11,7 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 ## Vue d'ensemble
 
-Alternative auto-hébergée à Trello, Notion et Asana
+Focalboard is a project management tool that helps define, organize, track and manage work across teams, using a familiar kanban board view.
 
 **Version incluse :** 0.8.0~ynh1
 
