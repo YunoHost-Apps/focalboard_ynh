@@ -17,7 +17,7 @@
     },
     "license": "MIT",
     "maintainer": {
-        "name": "John doe"
+        "name": "eric_G"
     },
     "requirements": {
         "yunohost": ">= 4.2.4"
