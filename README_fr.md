@@ -13,7 +13,8 @@ Si vous n'avez pas YunoHost, regardez [ici](https://yunohost.org/#/install) pour
 
 Focalboard est un outil de gestion de projet qui aide à définir, organiser, suivre et gérer le travail entre les équipes, à l'aide d'une vue de tableau kanban familière.
 
-**Version incluse :** 0.8.0~ynh1
+
+**Version incluse :** 0.8.0~ynh2
 
 
 
@@ -24,7 +25,8 @@ Focalboard est un outil de gestion de projet qui aide à définir, organiser, su
 ## Documentations et ressources
 
 * Site officiel de l'app : https://www.focalboard.com/
-* Documentation officielle de l'admin : https://www.focalboard.com/guide/user/
+* Documentation officielle utilisateur : https://www.focalboard.com/guide/user/
+* Documentation officielle de l'admin : https://www.focalboard.com/guide/admin/
 * Dépôt de code officiel de l'app : https://github.com/mattermost/focalboard
 * Documentation YunoHost pour cette app : https://yunohost.org/app_focalboard
 * Signaler un bug : https://github.com/YunoHost-Apps/focalboard_ynh/issues
