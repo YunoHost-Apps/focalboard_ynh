@@ -15,9 +15,10 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 
 ## Overview
 
-Focalboard is a project management tool that helps define, organize, track and manage work across teams, using a familiar kanban board view.
+Focalboard is a project management tool that helps define, organize, track and manage work across teams, using a familiar kanban board view. Focalboard comes in two editions: 
 
-**Shipped version:** 0.8.0~ynh2
+
+**Shipped version:** 0.9.0~ynh1
 
 
 
