@@ -101,13 +101,16 @@ chown -R $app:www-data "$final_path"
 #=================================================
 # CREATE DIRECTORIES
 #=================================================
+ynh_script_progression --message="Creating a data directory..." --weight=1
 
 files_path=/home/yunohost.app/$app
 ynh_app_setting_set --app=$app --key=files_path --value=$files_path
 
 mkdir -p $files_path/files
-chown -R $app:www-data $files_path
+
 chmod -R 755 $files_path
+chmod -R o-rwx $files_path
+chown -R $app:www-data $files_path
 
 #=================================================
 # NGINX CONFIGURATION
