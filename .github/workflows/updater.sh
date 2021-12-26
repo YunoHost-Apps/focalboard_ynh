@@ -66,6 +66,9 @@ case $asset_url in
   *"focalboard-server-linux-amd64.tar.gz")
     src="app"
     ;;
+  *)
+    src=""
+    ;;
 esac
 
 # If $src is not empty, let's process the asset
