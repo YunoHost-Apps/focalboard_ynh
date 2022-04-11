@@ -35,6 +35,8 @@ app=$YNH_APP_INSTANCE_NAME
 #=================================================
 ynh_script_progression --message="Validating installation parameters..." --weight=1
 
+[ $YNH_ARCH == "amd64" ] || ynh_die --message="Unfortunately, Focalboard only provides binaries for AMD64 systems."
+
 final_path=/opt/yunohost/$app
 test ! -e "$final_path" || ynh_die --message="This path already contains a folder"
 
