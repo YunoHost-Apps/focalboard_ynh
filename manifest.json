@@ -13,7 +13,8 @@
         "website": "https://www.focalboard.com/",
         "admindoc": "https://www.focalboard.com/guide/admin/",
         "userdoc": "https://www.focalboard.com/guide/user/",
-        "code": "https://github.com/mattermost/focalboard"
+        "code": "https://github.com/mattermost/focalboard",
+        "cpe": "cpe:2.3:a:mattermost:focalboard"
     },
     "license": "MIT",
     "maintainer": {
