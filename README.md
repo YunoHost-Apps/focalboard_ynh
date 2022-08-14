@@ -20,6 +20,7 @@ Focalboard is a project management tool that helps define, organize, track and m
 
 **Shipped version:** 7.1.0~ynh1
 
+
 ## Screenshots
 
 ![Screenshot of Focalboard](./doc/screenshots/screenshot.jpg)
