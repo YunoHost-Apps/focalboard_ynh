@@ -23,7 +23,7 @@ db_name=$(ynh_app_setting_get --app=$app --key=db_name)
 port=$(ynh_app_setting_get --app=$app --key=port)
 files_path=$(ynh_app_setting_get --app=$app --key=files_path)
 
-enable_public_shared_boards=$(ynh_app_setting_get --app=$app --key=enable_public_shared_boards)
+enable_public_boards=$(ynh_app_setting_get --app=$app --key=enable_public_boards)
 
 #=================================================
 # CHECK VERSION
@@ -36,9 +36,9 @@ upgrade_type=$(ynh_check_app_version_changed)
 #=================================================
 ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
 
-if [ -z "$enable_public_shared_boards" ]; then
-	enable_public_shared_boards="true"
-	ynh_app_setting_set --app=$app --key=enable_public_shared_boards --value=$enable_public_shared_boards
+if [ -z "$enable_public_boards" ]; then
+	enable_public_boards="false"
+	ynh_app_setting_set --app=$app --key=enable_public_boards --value=$enable_public_boards
 fi
 
 # Cleaning legacy permissions

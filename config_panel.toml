@@ -7,7 +7,7 @@ services = ["__APP__"]
     [main.config]
     name = "Configuration Options"
 
-        [main.config.enablePublicSharedBoards]
+        [main.config.enable_public_boards]
         ask = "Enable public boards"
         type = "boolean"
         yes = "true"
