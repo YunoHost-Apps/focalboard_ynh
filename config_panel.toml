@@ -1,0 +1,16 @@
+version = "1.0"
+
+[main]
+name = "Focalboard configuration"
+services = ["__APP__"]
+
+    [main.config]
+    name = "Configuration Options"
+
+        [main.config.enablePublicSharedBoards]
+        ask = "Enable public boards"
+        type = "boolean"
+        yes = "true"
+		no = "false"
+        help = "Enable publishing boards for public access"
+        bind = "enablePublicSharedBoards:__FINALPATH__/config.json"
