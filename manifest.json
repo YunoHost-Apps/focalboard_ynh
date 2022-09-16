@@ -6,7 +6,7 @@
         "en": "Self-hosted alternative to Trello, Notion, and Asana",
         "fr": "Alternative auto-hébergée à Trello, Notion et Asana"
     },
-    "version": "7.1.0~ynh3",
+    "version": "7.2.1~ynh1",
     "url": "https://www.focalboard.com/",
     "upstream": {
         "license": "MIT",
