@@ -20,8 +20,12 @@ domain=$(ynh_app_setting_get --app=$app --key=domain)
 path_url=$(ynh_app_setting_get --app=$app --key=path)
 final_path=$(ynh_app_setting_get --app=$app --key=final_path)
 db_name=$(ynh_app_setting_get --app=$app --key=db_name)
+db_user=$db_name
+db_pwd=$(ynh_app_setting_get --app=$app --key=psqlpwd)
 port=$(ynh_app_setting_get --app=$app --key=port)
 files_path=$(ynh_app_setting_get --app=$app --key=files_path)
+
+enable_public_boards=$(ynh_app_setting_get --app=$app --key=enable_public_boards)
 
 #=================================================
 # CHECK VERSION
@@ -33,6 +37,11 @@ upgrade_type=$(ynh_check_app_version_changed)
 # ENSURE DOWNWARD COMPATIBILITY
 #=================================================
 ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
+
+if [ -z "$enable_public_boards" ]; then
+	enable_public_boards="false"
+	ynh_app_setting_set --app=$app --key=enable_public_boards --value=$enable_public_boards
+fi
 
 # Cleaning legacy permissions
 if ynh_legacy_permissions_exists; then
@@ -95,7 +104,7 @@ then
 	ynh_secure_remove --file="$final_path"
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$final_path" #--keep="$final_path/config.json"
+	ynh_setup_source --dest_dir="$final_path" #--keep="config.json"
 	# Copy the admin saved settings from tmp directory to final path	
 	cp -a "$tmpdir/config.json" "$final_path/config.json" 
 
@@ -114,6 +123,14 @@ ynh_script_progression --message="Upgrading NGINX web server configuration..." -
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
+
+#=================================================
+# MODIFY A CONFIG FILE
+#=================================================
+ynh_script_progression --message="Modifying a config file..."
+
+ynh_add_config --template="../conf/config.json" --destination="$final_path/config.json"
+chmod 600 $final_path/config.json
 
 #=================================================
 # UPGRADE DEPENDENCIES
