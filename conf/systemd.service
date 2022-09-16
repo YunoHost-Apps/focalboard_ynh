@@ -1,5 +1,5 @@
 [Unit]
-Description=Focalboard server
+Description=Focalboard: kanban board
 
 [Service]
 Type=simple

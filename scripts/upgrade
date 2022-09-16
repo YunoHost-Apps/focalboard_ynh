@@ -38,6 +38,18 @@ upgrade_type=$(ynh_check_app_version_changed)
 #=================================================
 ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
 
+# If db_name doesn't exist, create it
+if [ -z "$db_name" ]; then
+	db_name=$(ynh_sanitize_dbid --db_name=$app)
+	ynh_app_setting_set --app=$app --key=db_name --value=$db_name
+fi
+
+# If final_path doesn't exist, create it
+if [ -z "$final_path" ]; then
+	final_path=/var/www/$app
+	ynh_app_setting_set --app=$app --key=final_path --value=$final_path
+fi
+
 if [ -z "$enable_public_boards" ]; then
 	enable_public_boards="false"
 	ynh_app_setting_set --app=$app --key=enable_public_boards --value=$enable_public_boards
@@ -53,6 +65,16 @@ fi
 # Create a permission if needed
 if ! ynh_permission_exists --permission="api"; then
 	ynh_permission_create --permission="api" --url="/api" --allowed="visitors" --auth_header="false" --show_tile="false" --protected="true"
+fi
+
+# Move files to new files path
+if [ -z "/opt/yunohost/$app/files" ]; then
+	mkdir -p $files_path/files
+	mv /opt/yunohost/$app/files $files_path/files
+
+	chmod -R 755 $files_path
+	chmod -R o-rwx $files_path
+	chown -R $app:www-data $files_path
 fi
 
 #=================================================
@@ -93,23 +115,9 @@ ynh_system_user_create --username=$app --home_dir="$final_path"
 if [ "$upgrade_type" == "UPGRADE_APP" ]
 then
 	ynh_script_progression --message="Upgrading source files..." --weight=1
-	
-	# Create a temporary directory
-	tmpdir="$(mktemp -d)"
-
-	# Backup the config file in the temp dir
-	cp -a "$final_path/config.json" "$tmpdir/config.json"
-
-	# Remove the app directory securely
-	ynh_secure_remove --file="$final_path"
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$final_path" #--keep="config.json"
-	# Copy the admin saved settings from tmp directory to final path	
-	cp -a "$tmpdir/config.json" "$final_path/config.json" 
-
-	# Remove the tmp directory securely
-	ynh_secure_remove --file="$tmpdir"
+	ynh_setup_source --dest_dir="/var/www/$app"
 fi
 
 chmod 750 "$final_path"
