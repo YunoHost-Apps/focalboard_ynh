@@ -104,7 +104,7 @@ then
 	ynh_secure_remove --file="$final_path"
 
 	# Download, check integrity, uncompress and patch the source from app.src
-	ynh_setup_source --dest_dir="$final_path" #--keep="$final_path/config.json"
+	ynh_setup_source --dest_dir="$final_path" #--keep="config.json"
 	# Copy the admin saved settings from tmp directory to final path	
 	cp -a "$tmpdir/config.json" "$final_path/config.json" 
 
