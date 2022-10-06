@@ -18,7 +18,7 @@ If you don't have YunoHost, please consult [the guide](https://yunohost.org/#/in
 Focalboard is a project management tool that helps define, organize, track and manage work across teams, using a familiar kanban board view.
 
 
-**Shipped version:** 7.1.0~ynh2
+**Shipped version:** 7.2.1~ynh1 *(:warning: This is the `ci-auto-update-v7.2.1` branch. The [`master` branch](https://github.com/YunoHost-Apps/focalboard_ynh/tree/master) used in the catalog is currently on version 7.1.0\~ynh1.)*
 
 
 ## Screenshots
