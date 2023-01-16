@@ -3,8 +3,8 @@
     "id": "focalboard",
     "packaging_format": 1,
     "description": {
-        "en": "Self-hosted alternative to Trello, Notion, and Asana",
-        "fr": "Alternative auto-hébergée à Trello, Notion et Asana"
+        "en": "Kanban project management software",
+        "fr": "Logiciel de gestion de projet Kanban"
     },
     "version": "7.5.2~ynh1",
     "url": "https://www.focalboard.com/",
