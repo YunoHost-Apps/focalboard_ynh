@@ -6,6 +6,7 @@ It shall NOT be edited by hand.
 # Focalboard pour YunoHost
 
 [![Niveau d’intégration](https://dash.yunohost.org/integration/focalboard.svg)](https://dash.yunohost.org/appci/app/focalboard) ![Statut du fonctionnement](https://ci-apps.yunohost.org/ci/badges/focalboard.status.svg) ![Statut de maintenance](https://ci-apps.yunohost.org/ci/badges/focalboard.maintain.svg)
+
 [![Installer Focalboard avec YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=focalboard)
 
 *[Read this readme in english.](./README.md)*
