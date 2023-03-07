@@ -7,8 +7,8 @@ User=__APP__
 Group=__APP__
 Restart=always
 RestartSec=5s
-ExecStart=__FINALPATH__/bin/focalboard-server
-WorkingDirectory=__FINALPATH__
+ExecStart=__INSTALL_DIR__/bin/focalboard-server
+WorkingDirectory=__INSTALL_DIR__
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these 
