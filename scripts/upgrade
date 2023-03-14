@@ -20,7 +20,7 @@ upgrade_type=$(ynh_check_app_version_changed)
 #=================================================
 ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
 
-if [ -z "$enable_public_boards" ]; then
+if [ -z "${enable_public_boards:-}" ]; then
 	enable_public_boards="false"
 	ynh_app_setting_set --app=$app --key=enable_public_boards --value=$enable_public_boards
 fi
@@ -64,35 +64,27 @@ chmod -R o-rwx "$install_dir"
 chown -R $app:www-data "$install_dir"
 
 #=================================================
-# NGINX CONFIGURATION
+# REAPPLY SYSTEM CONFIGURATIONS
 #=================================================
-ynh_script_progression --message="Upgrading NGINX web server configuration..." --weight=1
+ynh_script_progression --message="Upgrading system configurations related to $app..." --weight=1
 
 # Create a dedicated NGINX config
 ynh_add_nginx_config
 
-#=================================================
-# MODIFY A CONFIG FILE
-#=================================================
-ynh_script_progression --message="Modifying a config file..."
-
-ynh_add_config --template="../conf/config.json" --destination="$install_dir/config.json"
-chmod 600 $install_dir/config.json
-
-#=================================================
-# SETUP SYSTEMD
-#=================================================
-ynh_script_progression --message="Upgrading systemd configuration..." --weight=1
-
 # Create a dedicated systemd config
 ynh_add_systemd_config
 
-#=================================================
-# INTEGRATE SERVICE IN YUNOHOST
-#=================================================
-ynh_script_progression --message="Integrating service in YunoHost..." --weight=1
-
 yunohost service add $app --description="Self-hosted kanban board" --log="/var/log/$app/$app.log"
+
+#=================================================
+# MODIFY A CONFIG FILE
+#=================================================
+ynh_script_progression --message="Modifying a config file..." --weight=1
+
+ynh_add_config --template="../conf/config.json" --destination="$install_dir/config.json"
+
+chmod 600 "$install_dir/config.json"
+chown $app:$app "$install_dir/config.json"
 
 #=================================================
 # START SYSTEMD SERVICE

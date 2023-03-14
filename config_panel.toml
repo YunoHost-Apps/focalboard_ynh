@@ -13,4 +13,4 @@ services = ["__APP__"]
         yes = "true"
 		no = "false"
         help = "Enable publishing boards for public access"
-        bind = "enablePublicSharedBoards:__FINALPATH__/config.json"
+        bind = "enablePublicSharedBoards:__INSTALL_DIR__/config.json"
