@@ -20,7 +20,7 @@ upgrade_type=$(ynh_check_app_version_changed)
 #=================================================
 ynh_script_progression --message="Ensuring downward compatibility..." --weight=1
 
-if [ -z "$enable_public_boards" ]; then
+if [ -z "${enable_public_boards:-}" ]; then
 	enable_public_boards="false"
 	ynh_app_setting_set --app=$app --key=enable_public_boards --value=$enable_public_boards
 fi
