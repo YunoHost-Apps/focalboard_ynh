@@ -5,7 +5,7 @@ name = "Focalboard"
 description.en = "Kanban project management software"
 description.fr = "Logiciel de gestion de projet Kanban"
 
-version = "7.9.0~ynh2"
+version = "7.9.1~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -41,8 +41,8 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/mattermost/focalboard/releases/download/v7.9.0/focalboard-server-linux-amd64.tar.gz"
-        sha256 = "0785c65bd1e78d378bef2fdc2154a5928b23a336ae8e5568c441163e6ed89cda"
+        url = "https://github.com/mattermost/focalboard/releases/download/v7.9.1/focalboard-server-linux-amd64.tar.gz"
+        sha256 = "8b66b01be89734740d2e4ca04e9da721c0ddd10291ddff4bd894a5f964646597"
 
     [resources.ports]
 
