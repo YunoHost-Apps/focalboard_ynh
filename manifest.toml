@@ -17,7 +17,7 @@ userdoc = "https://www.focalboard.com/guide/user/"
 code = "https://github.com/mattermost/focalboard"
 
 [integration]
-yunohost = ">= 11.1.15"
+yunohost = ">= 11.1.16"
 architectures = ["amd64"]
 multi_instance = false
 ldap =  false
@@ -43,6 +43,7 @@ ram.runtime = "50M"
         [resources.sources.main]
         url = "https://github.com/mattermost/focalboard/releases/download/v7.9.1/focalboard-server-linux-amd64.tar.gz"
         sha256 = "8b66b01be89734740d2e4ca04e9da721c0ddd10291ddff4bd894a5f964646597"
+        autoupdate.strategy = "latest_github_tag"
 
     [resources.ports]
 
