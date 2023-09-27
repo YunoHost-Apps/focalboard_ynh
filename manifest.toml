@@ -5,7 +5,7 @@ name = "Focalboard"
 description.en = "Kanban project management software"
 description.fr = "Logiciel de gestion de projet Kanban"
 
-version = "7.9.4~ynh1"
+version = "7.11.3~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -17,7 +17,7 @@ userdoc = "https://www.focalboard.com/guide/user/"
 code = "https://github.com/mattermost/focalboard"
 
 [integration]
-yunohost = ">= 11.1.19"
+yunohost = ">= 11.2"
 architectures = ["amd64"]
 multi_instance = false
 ldap =  false
@@ -29,11 +29,8 @@ ram.runtime = "50M"
 [install]
     [install.domain]
     type = "domain"
-    full_domain = true
 
     [install.init_main_permission]
-    help.en = "If enabled, Focalboard will be accessible by people who do not have an account. This can be changed later via the webadmin."
-    help.fr = "Si cette case est cochée, Focalboard sera accessible aux personnes n’ayant pas de compte. Vous pourrez changer ceci plus tard via la webadmin."
     type = "group"
     default = "visitors"
 
@@ -41,8 +38,8 @@ ram.runtime = "50M"
 
     [resources.sources]
         [resources.sources.main]
-        url = "https://github.com/mattermost/focalboard/releases/download/v7.9.4/focalboard-server-linux-amd64.tar.gz"
-        sha256 = "3c04b0b21e499f4dc90c4d792748dcb08fa5f6ce17c318c8d2e28c2ed79fc9ba"
+        url = "https://github.com/mattermost/focalboard/releases/download/v7.11.3/focalboard-server-linux-amd64.tar.gz"
+        sha256 = "3515ef5b90fe2d958b8869e0191915f0ca46ee4e6950e16c9647423981ebeecd"
 
     [resources.ports]
 
