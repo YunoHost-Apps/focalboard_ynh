@@ -5,10 +5,10 @@ Description=Focalboard: kanban board
 Type=simple
 User=__APP__
 Group=__APP__
+WorkingDirectory=__INSTALL_DIR__/
+ExecStart=__INSTALL_DIR__/bin/focalboard-server
 Restart=always
 RestartSec=5s
-ExecStart=__INSTALL_DIR__/bin/focalboard-server
-WorkingDirectory=__INSTALL_DIR__
 
 # Sandboxing options to harden security
 # Depending on specificities of your service/app, you may need to tweak these 
