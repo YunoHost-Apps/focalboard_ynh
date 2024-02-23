@@ -42,7 +42,7 @@ ram.runtime = "50M"
     [resources.sources]
         [resources.sources.main]
         url = "https://github.com/mattermost/focalboard/releases/download/v7.10.6/focalboard-server-linux-amd64.tar.gz"
-        sha256 = "3515ef5b90fe2d958b8869e0191915f0ca46ee4e6950e16c9647423981ebeecd"
+        sha256 = "76474c41c17f693ac7303c89815f51001d0acc2d5e844bca9846029079038bfe"
         autoupdate.strategy = "latest_github_release"
         autoupdate.asset = "^focalboard-server-linux-amd64.tar.gz$"
 
