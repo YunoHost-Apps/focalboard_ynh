@@ -5,7 +5,7 @@ EZ editatu eskuz.
 
 # Focalboard YunoHost-erako
 
-[![Integrazio maila](https://dash.yunohost.org/integration/focalboard.svg)](https://dash.yunohost.org/appci/app/focalboard) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/focalboard.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/focalboard.maintain.svg)
+[![Integrazio maila](https://dash.yunohost.org/integration/focalboard.svg)](https://ci-apps.yunohost.org/ci/apps/focalboard/) ![Funtzionamendu egoera](https://ci-apps.yunohost.org/ci/badges/focalboard.status.svg) ![Mantentze egoera](https://ci-apps.yunohost.org/ci/badges/focalboard.maintain.svg)
 
 [![Instalatu Focalboard YunoHost-ekin](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=focalboard)
 
