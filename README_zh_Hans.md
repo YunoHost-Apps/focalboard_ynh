@@ -5,7 +5,9 @@
 
 # YunoHost 上的 Focalboard
 
-[![集成程度](https://dash.yunohost.org/integration/focalboard.svg)](https://ci-apps.yunohost.org/ci/apps/focalboard/) ![工作状态](https://ci-apps.yunohost.org/ci/badges/focalboard.status.svg) ![维护状态](https://ci-apps.yunohost.org/ci/badges/focalboard.maintain.svg)
+[![集成程度](https://apps.yunohost.org/badge/integration/focalboard)](https://ci-apps.yunohost.org/ci/apps/focalboard/)
+![工作状态](https://apps.yunohost.org/badge/state/focalboard)
+![维护状态](https://apps.yunohost.org/badge/maintained/focalboard)
 
 [![使用 YunoHost 安装 Focalboard](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=focalboard)
 
