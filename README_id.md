@@ -5,7 +5,9 @@ Ini TIDAK boleh diedit dengan tangan.
 
 # Focalboard untuk YunoHost
 
-[![Tingkat integrasi](https://dash.yunohost.org/integration/focalboard.svg)](https://ci-apps.yunohost.org/ci/apps/focalboard/) ![Status kerja](https://ci-apps.yunohost.org/ci/badges/focalboard.status.svg) ![Status pemeliharaan](https://ci-apps.yunohost.org/ci/badges/focalboard.maintain.svg)
+[![Tingkat integrasi](https://apps.yunohost.org/badge/integration/focalboard)](https://ci-apps.yunohost.org/ci/apps/focalboard/)
+![Status kerja](https://apps.yunohost.org/badge/state/focalboard)
+![Status pemeliharaan](https://apps.yunohost.org/badge/maintained/focalboard)
 
 [![Pasang Focalboard dengan YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=focalboard)
 

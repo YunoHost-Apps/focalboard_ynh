@@ -5,7 +5,9 @@ Hij mag NIET handmatig aangepast worden.
 
 # Focalboard voor Yunohost
 
-[![Integratieniveau](https://dash.yunohost.org/integration/focalboard.svg)](https://ci-apps.yunohost.org/ci/apps/focalboard/) ![Mate van functioneren](https://ci-apps.yunohost.org/ci/badges/focalboard.status.svg) ![Onderhoudsstatus](https://ci-apps.yunohost.org/ci/badges/focalboard.maintain.svg)
+[![Integratieniveau](https://apps.yunohost.org/badge/integration/focalboard)](https://ci-apps.yunohost.org/ci/apps/focalboard/)
+![Mate van functioneren](https://apps.yunohost.org/badge/state/focalboard)
+![Onderhoudsstatus](https://apps.yunohost.org/badge/maintained/focalboard)
 
 [![Focalboard met Yunohost installeren](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=focalboard)
 
