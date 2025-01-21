@@ -21,7 +21,7 @@ Ini TIDAK boleh diedit dengan tangan.
 Focalboard is a project management tool that helps define, organize, track and manage work across teams, using a familiar kanban board view.
 
 
-**Versi terkirim:** 7.11.4~ynh2
+**Versi terkirim:** 7.11.4~ynh3
 
 ## Tangkapan Layar
 
