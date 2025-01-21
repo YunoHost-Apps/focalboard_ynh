@@ -5,7 +5,7 @@ name = "Focalboard"
 description.en = "Kanban project management software"
 description.fr = "Logiciel de gestion de projet Kanban"
 
-version = "7.11.4~ynh2"
+version = "7.11.4~ynh3"
 
 maintainers = []
 
